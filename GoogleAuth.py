@@ -13,8 +13,8 @@ class GoogleSheetsAPI:
     
     #connects with the google sheets api    
     def connect(self):
-        self.credentials = ServiceAccountCredentials.from_json_keyfile_name(
-            self.credentials_file_path, ['https://www.googleapis.com/auth/spreadsheets'])
+        scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+        self.credentials = ServiceAccountCredentials.from_json_keyfile_name(self.credentials_file_path, scope)
         self.gc = gspread.authorize(self.credentials)
         self.sh = self.gc.open_by_key(self.sheet_id)
     
