@@ -35,11 +35,13 @@
     <Compile Include="main.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MicrosoftAuth.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="accountsauth.json" />
+    <Content Include="googleauth.json" />
+    <Content Include="microsoftauth.txt" />
     <Content Include="README.md" />
     <Content Include="requirements.txt" />
   </ItemGroup>
